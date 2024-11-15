@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.navbar {
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #4eb0f18f 0%, #b7bee25f 100%);
+  border-radius: 1em;
+  padding: 2em;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item .logo {
+  width: 3.2em;
+  height: 3.2em;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.nav-item .text {
+  position: absolute;
+  bottom: -30px;
+  font-size: 14px;
+  opacity: 0;
+  color: white;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Hover effect to move icon and show text */
+.nav-item:hover .logo {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(1, 0, 0, 0.3);
+}
+
+.nav-item:hover .text {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.nav-item:hover {
+  transform: translateY(-10px);
+}
+
+/*media quries for responsiveness*/
+
+@media all and (max-width: 600px) {
+  .navbar {
+    padding: auto;
+    margin: auto;
+  }
+
+  .nav-item .logo {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
